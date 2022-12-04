@@ -27,10 +27,8 @@ function countHours(year, holidays) {
     const date = new Date(`${year}-${holiday}`);
     return date.getDay();
   });
-  console.log(days);
   return (
     days.filter((day) => {
-      //   console.log((day > 0 && day < 6) * 2);
       return day > 0 && day < 6;
     }).length * 2
   );
